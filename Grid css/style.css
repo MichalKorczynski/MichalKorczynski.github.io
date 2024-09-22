@@ -2,6 +2,9 @@ body {
     margin: 0;
     background-color: rgb(16, 17, 18);
 }
+a {
+    text-decoration: none;
+}
 
 /*
 Nav with links
@@ -44,12 +47,12 @@ Items
     grid-template-columns: 1fr;
     grid-template-rows: 1fr;
 }
+
     
 #i1 {
     background-image: url(gw.jpg);
     background-size: cover;
     background-position: center;
-
     
     margin: 10px;
     padding: 10px;
@@ -79,6 +82,7 @@ Items
 
 #i1 h2 {
     color: gold;
+    
 }
 
 #i2 h2 {
