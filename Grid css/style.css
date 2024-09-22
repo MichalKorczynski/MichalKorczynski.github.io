@@ -96,7 +96,7 @@ Items
 /*
 Products for sale
 */
-.products {
+#products {
     display: grid;
     grid-template-columns: 100%;
 }
@@ -216,7 +216,7 @@ Products for sale
     /*
     Products for sale
     */
-    .products {
+    #products {
         display: grid;
         grid-template-columns: 25% 25% 25% 25%;
     }
