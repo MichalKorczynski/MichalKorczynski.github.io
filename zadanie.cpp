@@ -2,36 +2,37 @@
 #include <iostream>
 #include <time.h>
 
-void NWD1() {
-    clock_t start = clock();
-    int a, b;
+void NWD1() { //B1.a
+    //kr00
+    clock_t start = clock(); //B2
+    int a, b; //kr01
     std::cout << "Podaj dwie liczby: ";
     std::cin >> a >> b;
-    while (a != b) {
-        if (a < b) {
+    while (a != b) { //kr02
+        if (a < b) { //kr03
             b = b - a;
         }
         else {
             a = a - b;
         }
     }
-    std::cout << "NWD = " << a << std::endl;
+    std::cout << "NWD = " << a << std::endl; //kr04
     clock_t end = clock();
     double elapsed = double(end - start) / CLOCKS_PER_SEC;
     std::cout << "Czas wykonania: " << elapsed << std::endl;
-}
-void NWD2() {
-    clock_t start2 = clock();
+} //kr05
+void NWD2() { //B1.b
+    clock_t start2 = clock(); //?B2
     int tmp;
-    int a, b;
+    int a, b; //kr01
     std::cout << "Podaj dwie liczby: ";
     std::cin >> a >> b;
-    while (b != 0) {
-        tmp = b;
-        b = a % b;
-        a = tmp;
+    while (b != 0) { //kr02
+        tmp = b; //kr03
+        b = a % b; //kr04
+        a = tmp; //kr05
     }
-    std::cout << "NWD = " << a << std::endl;
+    std::cout << "NWD = " << a << std::endl; //kr06
     clock_t end2 = clock();
     double elapsed2 = double(end2 - start2) / CLOCKS_PER_SEC;
     std::cout << "Czas wykonania: " << elapsed2 << std::endl;
