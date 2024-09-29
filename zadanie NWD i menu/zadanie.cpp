@@ -212,7 +212,7 @@ void zad4() {
     int percentGrades[] = { 39, 54, 69, 85, 99 };
 
 
-    for (int i = 0; i <= 30; i++) {
+    for (int i = 0; i <= 9; i++) {
 
         std::cout << "Podaj imie ucznia:";
         std::cin >> names[i];
