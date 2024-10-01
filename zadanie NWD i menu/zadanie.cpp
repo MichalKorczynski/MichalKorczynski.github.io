@@ -339,24 +339,91 @@ void NWD1() { //B1.a
         std::cout << std::endl;
     }
 
-
+    /*while (b != 0) { //kr02
+            tmp = b; //kr03
+            b = a % b; //kr04
+            a = tmp; //kr05
+    }*/
 } //kr05
-void NWD2() { //B1.b
-    clock_t start2 = clock(); //?B2
-    int tmp;
-    int a, b; //kr01
+void NWD2() { //B1.a
+    //kr00
+    long long a, b, c; //kr01
+    std::cout << "Ile pomiarow chesz wykonac: ";
+    std::cin >> c;
+    if (c <= 0) {
+        c = 1;
+    }
+    std::cout << std::endl;
+
+    double pomiary[c];
+    long long iteracje[c];
+    int liczby[c];
+
     std::cout << "Podaj dwie liczby: ";
     std::cin >> a >> b;
-    while (b != 0) { //kr02
-        tmp = b; //kr03
-        b = a % b; //kr04
-        a = tmp; //kr05
+    long long bT = b;
+    long long tempB = b;
+    long long tempB2 = b;
+    for (int j = 0; j <= c - 1; j++) {
+        if (j != 0) {
+            bT += tempB;
+        }
+        liczby[j] = bT;
     }
-    std::cout << "NWD = " << a << std::endl; //kr06
-    clock_t end2 = clock();
-    double elapsed2 = double(end2 - start2) / CLOCKS_PER_SEC;
-    std::cout << "Czas wykonania: " << elapsed2 << std::endl;
-}
+
+    std::cout << "|==================================|" << std::endl;
+    for (int i = 0; i <= c - 1; i++) {
+        b = tempB;
+        if (i != 0) {
+            b += tempB2;
+        }
+        tempB = b;
+        long long tmp;
+        clock_t start2 = clock(); //B2
+        while (b != 0) { //kr02
+            tmp = b; //kr03
+            b = a % b; //kr04
+            a = tmp; //kr05
+            iteracje[i]++;
+        }
+        clock_t end2 = clock();
+
+        double elapsed2 = static_cast<double>(end2 - start2) / CLOCKS_PER_SEC;
+
+
+
+        pomiary[i] = elapsed2 * 1000;
+
+        std::cout << "| Pomiar " << i + 1 << " NWD (" << a << "," << liczby[i] << ") = " << a << std::endl; //kr04
+        std::cout << "| Czas: " << " " << pomiary[i] << std::endl;
+        std::cout << "| Iteracje: " << " " << iteracje[i] << std::endl;
+        std::cout << std::endl;
+    }
+    std::cout << "|==================================|" << std::endl;
+    std::cout << std::endl;
+    int czas[c];
+
+    for (int k = 0; k <= c - 1; k++) {
+        czas[k] = pomiary[k];
+        for (int h = 0; h <= 100; h++) {
+            if (czas[k] == h) {
+                std::cout << "*";
+            }
+
+            else {
+                std::cout << ".";
+
+            }
+        }
+        std::cout << std::endl;
+    }
+
+    /*while (b != 0) { //kr02
+            tmp = b; //kr03
+            b = a % b; //kr04
+            a = tmp; //kr05
+    }*/
+} //kr05
 
 int main() {
     bool isTrue = true;
@@ -366,7 +433,7 @@ int main() {
         std::cout << "| Wybierz:                         |" << std::endl;
         std::cout << "|==================================|" << std::endl;
         std::cout << "| 0. Exit                          |" << std::endl;
-        std::cout << "| 1. NWD sp1 + ilosc pomiarow      |" << std::endl;
+        std::cout << "| 1. NWD sp1                       |" << std::endl;
         std::cout << "| 2. NWD sp2                       |" << std::endl;
         std::cout << "| 3. zad1                          |" << std::endl;
         std::cout << "| 4. zad2                          |" << std::endl;
