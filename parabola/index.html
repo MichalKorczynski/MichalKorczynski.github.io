@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parabola</title>
+    <style>
+        .div1{
+            background-color: rgb(21, 255, 0);
+            width: 150px;
+            height: 50px;
+
+            
+            position: absolute;
+            left: 150px;
+            bottom: 0px;
+        }
+        .div2{
+            background-color: rgb(255, 0, 0);
+
+            width: 150px;
+            height: 50px;
+
+            position: absolute;
+            left: 1050px;
+            bottom: 0px;
+        }
+        .div3{
+            background-color: rgb(0, 119, 255);
+
+            width: 50px;
+            height: 50px;
+
+            position: absolute;
+            bottom: -150px ;
+            left: 650px;
+
+            animation: script 5s linear infinite;
+        }
+        @keyframes script{
+            0%{
+                transform: rotate(-90deg) translateX(200px) translateY(-400px);
+            }
+            50%{
+                transform: rotate(90deg) translateX(-200px) translateY( -400px);
+            }
+            100%{
+                transform: rotate(-90deg) translateX(200px) translateY(-400px);
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="div1"></div> 
+    <div class="div2"></div>
+    <div class="div3"></div>
+</body>
+</html>
