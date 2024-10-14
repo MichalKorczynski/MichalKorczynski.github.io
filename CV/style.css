@@ -1,19 +1,22 @@
 * {
     margin: 0;
+    font-family: 'JetBrains Mono';
 }
 body {
     background-color: rgb(21, 63, 104);
     color: white;
-    font-size: medium;
-    font-family: 'JetBrains Mono';
+    font-size: x-large;
 }
 span {
     color: white;
 }
 a {
-    text-decoration: none;
     color: white;
 }
+.contact-links {
+    text-decoration: none;
+    font-size: medium;
+} 
 h1 {
     color: orangered;
 }
@@ -34,7 +37,7 @@ ul {
     background-color: rgb(25, 78, 130);
     min-width: 20%;
     max-width: 20%;
-    height: 100vh;
+    height: 120vh;
     padding: 10px;
 }
 .side img {
