@@ -5,7 +5,7 @@
 body {
     background-color: rgb(21, 63, 104);
     color: white;
-    font-size: x-large;
+    font-size: large;
 }
 span {
     color: white;
@@ -16,7 +16,6 @@ a {
 .contact-links {
     text-decoration: none;
     font-size:small;
-    display:inline;
 } 
 h1 {
     color: orangered;
@@ -38,7 +37,7 @@ ul {
     background-color: rgb(25, 78, 130);
     min-width: 22%;
     max-width: 22%;
-    height: 120vh;
+    height: 150vh;
     padding: 10px;
 }
 .side img {
