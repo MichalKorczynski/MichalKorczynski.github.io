@@ -36,8 +36,8 @@ ul {
 }
 .side {
     background-color: rgb(25, 78, 130);
-    min-width: 25%;
-    max-width: 25%;
+    min-width: 22%;
+    max-width: 22%;
     height: 120vh;
     padding: 10px;
 }
