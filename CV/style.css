@@ -16,6 +16,7 @@ a {
 .contact-links {
     text-decoration: none;
     font-size:small;
+    display:inline;
 } 
 h1 {
     color: orangered;
